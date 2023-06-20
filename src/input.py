@@ -1,6 +1,6 @@
 class Vehicle(object):
-    def _str_(self):
-        return self._class.name_
+    def __str__(self):
+        return self.__class__.__name__
 
 class Truck(Vehicle):
     def accept(self, visitor):
@@ -54,5 +54,5 @@ def main():
         v.accept(repair)
         v.accept(driver)
 
-if _name== "main_":
+if __name__ == "__main__":
     main()
